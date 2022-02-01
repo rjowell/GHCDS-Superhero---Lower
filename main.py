@@ -5,10 +5,10 @@ from enemy import Enemy
 #(self,_name,_evilPower,_hp,_isHuman):
 print("Welcome to PYTHON BATTLE!")
 
-heroName = input("Enter your hero's name")
-heroSuperpower = input("What is your hero's superpower")
-hpInput = int(input("How many Hit Points does your hero have?"))
-isHuman = input("Is your hero human? Y/N")
+heroName = input("Enter your hero's name ")
+heroSuperpower = input("What is your hero's superpower ")
+hpInput = int(input("How many Hit Points does your hero have? "))
+isHuman = input("Is your hero human? Y/N ")
 
 heroHuman = True
 
@@ -19,9 +19,9 @@ Player = Superhero(heroName,heroSuperpower,hpInput,heroHuman)
 ComputerPlayer = Enemy("Jamal","Shoot Webs",420,True)
 
 while Player.dead == False and ComputerPlayer.dead == False:
-  userAction = input("Press X to fight the enemy")
+  userAction = input("Press X to fight the enemy ")
   if userAction == "X":
-    Player.fight(Enemy, 20)
+    Player.fight(ComputerPlayer, 20)
 
   ComputerPlayer.fight(Player, 32)
 
