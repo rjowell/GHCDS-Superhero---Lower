@@ -1,16 +1,16 @@
-class Superhero:
+class Enemy:
 
   dead = False
   
-  def fly(self):
-    print("flying now")
+  def teleport(self):
+    print("teleporting now")
 
   def recharge(self):
     print("I'm coming back to life")
 
   def playerDied(self):
-    self.dead = True
     print(self.name + "is dead")
+    self.dead = True
   
   def fight(self,victim,damage):
     victim.takeDamage(damage)
@@ -23,34 +23,8 @@ class Superhero:
       print(self.name + " now has "+str(self.hitPoints)+ "HP left")
 
   #initialize
-  def __init__(self,_name,_superpower,_hp,_isHuman):
+  def __init__(self,_name,_evilPower,_hp,_isHuman):
     self.name = _name
-    self.superpower = _superpower
+    self.evilPower = _evilPower
     self.hitPoints = _hp
     self.human = _isHuman
-
-
-
-
-
-
-
-
-
-
-# This thing is called what?
-
-'''
-HOW CAN WE CUSTOMIZE OUR SUPERHERO?
-Special Moves
-Costume
-Name
-Height
-Hair Color
-The Way They Are Built
-Body Type
-Species - Human/Cyborg
-Number of Hit Points
-weakensses
-
-'''
